@@ -1,0 +1,162 @@
+
+body {
+
+}
+
+#center{
+	text-align: center;
+	width: 400px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#progressCircle{
+	width: 350px;
+	height: 350px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+#timer{
+	font-size: 80px;
+}
+
+span{
+
+}
+
+.edit-blink{
+	animation: Flash 1.0s infinite;
+}
+
+.finish-blink{
+	animation: Flash 1.0s infinite;
+}
+
+@keyframes Flash{
+	0%,100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+
+//circleProgress
+.circle {
+	position: relative;
+
+	border-radius: 50%;
+	text-align: center;
+	overflow: hidden;
+	z-index: 1;
+
+	.circle-left-block{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 100%;
+		height: 100%;
+		transform-origin: right 50%;
+		z-index: 2;
+	}
+
+	.circle-right-block{
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		transform-origin: left 50%;
+		z-index: 3;
+	}
+
+
+	.circle-back {
+		position: absolute;
+
+		margin: 8%;
+		width: 100% - 8%*2;
+		height: 100% - 8%*2;
+
+		//top: 8%;
+		//left: 8%;
+		//width: 84%;
+		//height: 50%;
+		//padding-top: 34%;
+		background: #fff;
+		border-radius: 50%;
+		z-index: 4;
+
+	}
+
+	.circle-inner{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+
+		z-index: 5;
+	}
+}
+
+.mb-10{
+	margin-bottom:10px;
+}
+
+.btn-mod, a.btn-mod{
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 8px 10px;
+	color: #fff;
+	border: 2px solid transparent;
+	font-size: 11px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 2px;
+
+	border-radius: 0;
+
+}
+//クリック
+.btn-mod:active{
+	cursor: pointer !important;
+	position:relative;
+	top:1px;
+}
+
+.btn-mod:hover {
+	background-color:#f6f6f6;
+}
+
+//サイズ
+.btn-mod.btn-medium{
+	width: 40%;
+	font-size: 12px;
+}
+.btn-mod.btn-large{
+	width: 80%;
+	font-size: 13px;
+}
+
+//枠
+.btn-mod.btn-border{
+	color: #333333;
+	border: 2px solid #696969;
+}
+
+//角丸
+.btn-mod.btn-circle{
+	border-radius: 30px;
+}
+
+
