@@ -1,0 +1,3 @@
+# JSMiniTimer
+
+PureJSで作ったタイマー
